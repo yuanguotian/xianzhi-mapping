@@ -10,7 +10,9 @@
 - `check_map.py`：校验脚本，`python3 check_map.py batches/batch_NNNN.json results/map_NNNN.jsonl`，打印 OK 才算完成。
 
 ## 怎么做
+0. **开始前先 `git pull origin main`**（新批次和说明书更新都推在 main 上），合进你当前的分支。
 1. 列出 `batches/` 里还没有对应 `results/map_NNNN.jsonl` 的批次（或者只做用户在提示里指定的批次）。
+   `batch_rNNN.json` 是按新版说明书重做的表（结果写 `results/map_rNNN.jsonl`），同样要做，本地会用它覆盖旧结果。
 2. **每个批次派一个子代理**（effort 设为 high），同时最多 4 个。给子代理的任务：
    - 完整读 `mapping_spec.md`；
    - 读 `batches/batch_NNNN.json`；
